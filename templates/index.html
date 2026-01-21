@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Extractor | Scrape & Download Images</title>
+    <meta name="description" content="Extract and download images from any website. Preview, select, and download as a zip file.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="noise-overlay"></div>
+    
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <h1>Image Extractor</h1>
+            </div>
+            <p class="tagline">Scrape, preview, and download images from any website</p>
+        </header>
+
+        <section class="input-section glass-card">
+            <div class="input-wrapper">
+                <label for="url-input" class="input-label">Website URL</label>
+                <div class="input-group">
+                    <input 
+                        type="url" 
+                        id="url-input" 
+                        class="url-input" 
+                        placeholder="https://example.com"
+                        autocomplete="off"
+                    >
+                    <button id="scrape-btn" class="btn btn-primary">
+                        <span class="btn-text">Extract Images</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </div>
+            </div>
+            <p id="error-message" class="error-message"></p>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="results-header glass-card">
+                <div class="results-info">
+                    <h2 id="results-count">0 Images Found</h2>
+                    <p class="results-hint">Click images to toggle selection</p>
+                </div>
+                <div class="results-actions">
+                    <button id="select-all-btn" class="btn btn-secondary">Select All</button>
+                    <button id="download-btn" class="btn btn-accent" disabled>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span class="btn-text">Download Selected</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="image-grid" class="image-grid"></div>
+        </section>
+
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Scanning for images...</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Built with Flask & vanilla JS</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
