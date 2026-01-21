@@ -1,20 +1,20 @@
-# 🖼️ Image Extractor
+# Image Extractor
 
-A sleek web application to scrape, preview, and download images from any website.
+A web application to scrape, preview, and download images from any website.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.x-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## ✨ Features
+## Features
 
-- 🔍 **Extract images** from any URL
-- 👀 **Preview** all found images in a beautiful grid
-- ✅ **Select** individual images or all at once
-- 📦 **Download** selected images as a ZIP file (named after the website)
-- 🎨 **Modern UI** with glassmorphism design and smooth animations
+- Extract images from any URL
+- Preview all found images in a grid layout
+- Select individual images or all at once
+- Download selected images as a ZIP file (named after the website)
+- Modern UI with glassmorphism design and smooth animations
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the repository
 ```bash
@@ -41,7 +41,7 @@ python app.py
 ### 5. Open in browser
 Navigate to `http://localhost:5000`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ImageExtractor/
@@ -55,16 +55,12 @@ ImageExtractor/
     └── styles.css      # CSS styles
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Flask, BeautifulSoup4, Requests
 - **Frontend:** Vanilla JavaScript, CSS3
 - **Fonts:** Space Grotesk, JetBrains Mono
 
-## 📝 License
+## License
 
 MIT License - feel free to use this project for personal or commercial purposes.
-
----
-
-Built with ❤️ and Flask
